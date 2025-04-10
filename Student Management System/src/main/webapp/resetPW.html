@@ -8,14 +8,14 @@
 </head>
 <body>
   <div class="container">
-    <form class="form-box" onClick="return validatePassword()" action="reset" method="post">
+    <form class="form-box" onSubmit="return validatePassword()" action="reset" method="post">
       <h2>Reset Password</h2>
       <p style="margin-bottom: 10px; font-size: 14px; color: #555;">
         Enter your registered NIC and new password to reset password
       </p>
       <input type="text" name="nic" placeholder="NIC" required />
-      <input type="text" name="newPassword" placeholder="New Password" required />
-      <input type="text" name="confPassword" placeholder="Confirm Password" required />
+      <input type="password" name="newPassword" id="newPassword" placeholder="New Password" required />
+      <input type="password" name="confPassword" id="confPassword" placeholder="Confirm Password" required />
       <button type="submit">Reset Password</button>
       <div class="extra-links">
         <a href="index.html">Back to Login</a>
@@ -30,6 +30,7 @@
   			return true;
   		}
   		else{
+  			alert ("Password do not match.");
   			return false;
   		}
   	}
