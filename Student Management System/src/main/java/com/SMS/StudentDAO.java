@@ -40,7 +40,7 @@ public class  StudentDAO{
 		return isAuthenticate;
 	}
 	
-	boolean cheackStudent(String nic) {
+	boolean checkStudent(String nic) {
 		boolean isExists = false;
 		String query = "SELECT * FROM Student WHERE NIC = ?";
 		try(PreparedStatement st = connection.prepareStatement(query)){
@@ -56,12 +56,11 @@ public class  StudentDAO{
 		return isExists;
 	}
 	
-	private void resetCredentials(String nic, String email, String newPassword) {
-		String query = "UPDATE Student SET Password = ? WHERE NIC = ? AND Email = ?";
+	void resetCredentials(String nic, String newPassword) {
+		String query = "UPDATE Student SET Password = ? WHERE NIC = ? ";
 		try(PreparedStatement st = connection.prepareStatement(query)){
-			st.setString(1, nic);
-			st.setString(2, email);
-			st.setString(3, newPassword);
+			st.setString(1, newPassword);
+			st.setString(2, nic);
 			st.executeUpdate();
 		}
 		catch(SQLException e) {

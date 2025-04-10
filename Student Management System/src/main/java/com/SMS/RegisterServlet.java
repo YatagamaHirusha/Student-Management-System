@@ -17,7 +17,7 @@ public class RegisterServlet extends HttpServlet{
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String hashPassword = PasswordUtil.hashPassword(password);
-		if(!student.cheackStudent(nic)) {
+		if(!student.checkStudent(nic)) {
 			student.registerStudent(nic, name, email, hashPassword);
 			response.sendRedirect("index.html");
 		}

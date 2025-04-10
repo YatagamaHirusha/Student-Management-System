@@ -8,13 +8,13 @@
 </head>
 <body>
   <div class="container">
-    <form class="form-box" action="login" method="post">
+    <form class="form-box" onClick="return validatePassword()" action="reset" method="post">
       <h2>Reset Password</h2>
       <p style="margin-bottom: 10px; font-size: 14px; color: #555;">
-        Enter yout registered NIC and new password to reset password
+        Enter your registered NIC and new password to reset password
       </p>
       <input type="text" name="nic" placeholder="NIC" required />
-      <input type="text" name="password" placeholder="New Password" required />
+      <input type="text" name="newPassword" placeholder="New Password" required />
       <input type="text" name="confPassword" placeholder="Confirm Password" required />
       <button type="submit">Reset Password</button>
       <div class="extra-links">
@@ -22,5 +22,17 @@
       </div>
     </form>
   </div>
+  <script>
+  	function validatePassword(){
+  		const newPassword = document.getElementById("newPassword").value;
+  		const confPassword = document.getElementById("confPassword").value;
+  		if (newPassword == confPassword){
+  			return true;
+  		}
+  		else{
+  			return false;
+  		}
+  	}
+  </script>
 </body>
 </html>
