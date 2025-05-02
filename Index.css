@@ -1,0 +1,232 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .header-image {
+            position: relative;
+            width: 100%;
+            height: 300px; 
+            background: 
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+                url('paddy.jpg') no-repeat center 30%/cover;
+            text-align: center;
+            color: white;
+        }
+
+        
+        .header-image h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            background: rgba(0, 0, 0, 0.5); 
+            padding: 10px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px 0;
+        }
+        
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .navbar a:hover {
+            background: #555;
+        }
+
+        .quick-links {
+            text-align: center;
+            margin: 20px;
+        }
+        .quick-links button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+
+        .quick-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .quick-links button:hover {
+            background: #218838;
+        }
+
+        .announcements {
+            background: #eee;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background: #f5f5dc;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Vision 
+        .vision{
+            background: #eee;
+            padding: 20px;
+            text-align: center;
+        }*/
+
+        .vision {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9; 
+        }
+
+        .vision h2 {
+            color: #228B22; 
+        }
+
+        .vision ul {
+            list-style-type: none; 
+            padding: 0;
+        }
+
+      
+
+        
+        .about, .mission, .how-it-works, .contact {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            margin: 20px 0;
+        }
+
+        .about h2, .mission h2, .how-it-works h2, .contact h2 {
+            color: #228B22;
+        }
+
+        .about ul, .how-it-works ul{
+            list-style-type: none;
+        }
+
+        ul, ol {
+            list-style-position: inside; 
+            padding: 0;
+        }
+
+        .contact a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form button {
+            background: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form input, form select, form textarea, form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .testimonials {
+            text-align: center;
+            background: #f9f9f9;
+            padding: 40px 20px;
+        }
+
+        .testimonials h2 {
+            color: #228B22;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            width: 300px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial h4 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .statistics {
+            text-align: center;
+            background: #228B22; 
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .statistics h2 {
+            margin-bottom: 20px;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            width: 200px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2); 
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .stat p {
+            font-size: 16px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }

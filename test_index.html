@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrainChain | Paddy Information Portal</title>
+    <link rel="stylesheet" type="text/css" href="Index.css">
+</head>
+<body>
+
+    <div class="header-image">
+        <h1>GrainChain: Empowering Sri Lanka's Paddy Ecosystem</h1>
+    </div>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="Register.html">Register</a>
+        <a href="Login.html">Login</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Sri Lanka’s paddy farmers have long been the backbone of the nation’s food security. However, they often face unstable markets and inefficient systems.</p>
+        <p>GrainChain is a centralized digital platform that connects farmers, distributors, and government officials to streamline paddy management.</p>
+        <ul>
+            <li>Ensure fair pricing for farmers.</li>
+            <li>Streamline supply chains and reduce inefficiencies.</li>
+            <li>Strengthen national food security.</li>
+        </ul>
+    </section>
+
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>GrainChain aims to digitally transform Sri Lanka’s rice industry through:</p>
+        <ul>
+            <li><strong>Farmers:</strong> Enabling fair trade and timely payments.</li>
+            <li><strong>Officials:</strong> Providing real-time analytics for better decision-making.</li>
+            <li><strong>Distributors:</strong> Enhancing logistics to ensure timely deliveries.</li>
+        </ul>
+    </section>
+
+    <section class="testimonials">
+        <h2>Farmer Testimonials</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Before GrainChain, I struggled to get fair prices. Now, I sell directly and earn more."</p>
+                <h4>— Saman Perera</h4>
+            </div>
+            <div class="testimonial">
+                <p>"No more middlemen. I plan sales confidently with better profits."</p>
+                <h4>— Kamala Fernando</h4>
+            </div>
+            <div class="testimonial">
+                <p>"I now receive timely payments and the system is reliable."</p>
+                <h4>— Rajapaksha Silva</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="statistics">
+        <h2>Platform Impact</h2>
+        <div class="stats-container">
+            <div class="stat"><h3>5,000+</h3><p>Registered Farmers</p></div>
+            <div class="stat"><h3>200+</h3><p>Warehouses Connected</p></div>
+            <div class="stat"><h3>50,000+ tons</h3><p>Paddy Traded</p></div>
+            <div class="stat"><h3>30%</h3><p>Reduction in Wastage</p></div>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <a href="Register.html"><button>Register</button></a>
+        <a href="Login.html"><button>Login</button></a>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <p>GrainChain makes paddy management efficient and transparent. Here’s how:</p>
+        <ol>
+            <li><strong>Registration:</strong> Field officers input verified farmer data.</li>
+            <li><strong>Collection:</strong> Paddy is gathered and stored in regional warehouses.</li>
+            <li><strong>Monitoring:</strong> Real-time analytics help officials manage supply.</li>
+            <li><strong>Distribution:</strong> Efficient release prevents shortages and stabilizes pricing.</li>
+            <li><strong>Fair Trade:</strong> Payments are processed promptly with full transparency.</li>
+        </ol>
+    </section>
+
+    <section class="vision">
+        <h2>Our Vision</h2>
+        <p>We envision a Sri Lanka where every grain is valued and every farmer is empowered. Our goals include:</p>
+        <ul>
+            <li>Enhancing transparency and fair pricing.</li>
+            <li>Improving supply chain efficiency.</li>
+            <li>Driving sustainability through digital innovation.</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you're passionate about agriculture and digital innovation, we’d love to connect.</p>
+        <p><strong>Location:</strong> Paddy Marketing Board, Colombo, Sri Lanka</p>
+        <p><strong>Email:</strong> info@grainchain.lk</p>
+        <p><strong>Phone:</strong> +94 77 123 4567</p>
+        <p><strong>Website:</strong> <a href="http://www.grainchain.lk" target="_blank">www.grainchain.lk</a></p>
+
+        <form class="contact-form" method="post" action="C&S_Submit.php">
+            <input type="text" placeholder="Name" name="txtName" required>
+            <input type="email" placeholder="Email" name="txtEmail" required>
+            <textarea placeholder="Message" name="txtMessage"></textarea>
+            <button type="submit" name="btnSubmit">Submit</button>
+        </form>
+
+        <div class="social">
+            <h3>Follow Us</h3>
+            <p>Facebook | Twitter | Instagram | LinkedIn</p>
+        </div>
+    </section>
+
+    <section class="announcements">
+        <h3>Announcements</h3>
+        <p>Stay updated with the latest platform news and updates.</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 GrainChain. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll(".testimonial");
+
+        function showTestimonial(index) {
+            testimonials.forEach((t, i) => {
+                t.style.display = i === index ? "block" : "none";
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        setInterval(nextTestimonial, 5000);
+        showTestimonial(currentTestimonial);
+    </script>
+
+</body>
+</html>
