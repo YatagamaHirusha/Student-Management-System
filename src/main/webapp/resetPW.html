@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reset Password - Student Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <form class="form-box" action="reset" method="post">
+      <h2>Reset Password</h2>
+      <p style="margin-bottom: 10px; font-size: 14px; color: #555;">
+        Enter yout registered NIC and new password to reset password
+      </p>
+      <input type="text" name="nic" placeholder="NIC" required />
+      <input type="text" name="password" placeholder="New Password" required />
+      <input type="text" name="confPassword" placeholder="Confirm Password" required />
+      <button type="submit">Reset Password</button>
+      <div class="extra-links">
+        <a href="index.html">Back to Login</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
