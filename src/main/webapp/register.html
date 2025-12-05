@@ -8,13 +8,13 @@
 </head>
 <body>
   <div class="container">
-    <form class="form-box" onClick="return validatePassword()" action="register" method="post">
+    <form class="form-box" onsubmit="return validatePassword()" action="register" method="post">
       <h2>Register</h2>
       <input type="text" name="name" placeholder="Full Name" required />
       <input type="text" name="nic" placeholder="NIC" required />
       <input type="email" name="email" placeholder="Email" required />
-      <input type="password" name="password" placeholder="Password" required />
-      <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+      <input type="password" id="password" name="password" placeholder="Password" required />
+      <input type="password" id="confirmPassword" name="confirm_password" placeholder="Confirm Password" required />
       <button type="submit">Register</button>
       <div class="extra-links">
         <a href="index.html">Already have an account? Login</a>
@@ -22,16 +22,22 @@
     </form>
   </div>
   <script>
-  	function validatePassword(){
-  		const password = document.getElementById("password").value;
-  		const conPassword = document.getEleentById("confirmPassword").value;
-  		if(password == conPassword){
-  			return true;
-  		}
-  		else{
-  			return false;
-  		}
-  	}
+    function validatePassword() {
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      
+      if (password !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+        return false;
+      }
+      
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+      
+      return true;
+    }
   </script>
 </body>
 </html>

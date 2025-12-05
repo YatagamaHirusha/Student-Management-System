@@ -8,19 +8,37 @@
 </head>
 <body>
   <div class="container">
-    <form class="form-box" action="reset" method="post">
+    <form class="form-box" onsubmit="return validatePassword()" action="reset" method="post">
       <h2>Reset Password</h2>
       <p style="margin-bottom: 10px; font-size: 14px; color: #555;">
-        Enter yout registered NIC and new password to reset password
+        Enter your registered NIC and new password to reset password
       </p>
       <input type="text" name="nic" placeholder="NIC" required />
-      <input type="text" name="password" placeholder="New Password" required />
-      <input type="text" name="confPassword" placeholder="Confirm Password" required />
+      <input type="password" id="password" name="password" placeholder="New Password" required />
+      <input type="password" id="confirmPassword" name="confPassword" placeholder="Confirm Password" required />
       <button type="submit">Reset Password</button>
       <div class="extra-links">
         <a href="index.html">Back to Login</a>
       </div>
     </form>
   </div>
+  <script>
+    function validatePassword() {
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      
+      if (password !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+        return false;
+      }
+      
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+      
+      return true;
+    }
+  </script>
 </body>
 </html>

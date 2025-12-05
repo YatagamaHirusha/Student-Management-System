@@ -72,3 +72,25 @@ body {
 .extra-links a:hover {
   text-decoration: underline;
 }
+
+.form-box input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.form-box input.error {
+  border-color: #dc3545;
+}
+
+.form-box .error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-box .error-message.show {
+  display: block;
+}
+
