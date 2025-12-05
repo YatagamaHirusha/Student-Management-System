@@ -72,3 +72,69 @@ body {
 .extra-links a:hover {
   text-decoration: underline;
 }
+
+.form-box input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.form-box input.error {
+  border-color: #dc3545;
+}
+
+.form-box .error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+.form-box .error-message.show {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .form-box {
+    padding: 20px 15px;
+  }
+  
+  .form-box h2 {
+    font-size: 20px;
+  }
+  
+  .form-box input {
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  .form-box button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px;
+  }
+  
+  .extra-links {
+    font-size: 14px;
+  }
+  
+  .extra-links a {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .extra-links span {
+    display: none;
+  }
+}
+
