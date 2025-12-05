@@ -9,8 +9,13 @@
 </head>
 <body>
 
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+
   <!-- Sidebar -->
-  <div class="sidebar">
+  <div class="sidebar" id="sidebar">
     <!-- Profile Section -->
     <div class="profile">
       <img src="https://via.placeholder.com/80" alt="Profile Picture">
@@ -33,7 +38,7 @@
     <!-- Header -->
     <div class="header">
       <h1>Welcome back, John Doe!</h1>
-      <span class="logout">Logout</span>
+      <a href="index.html" class="logout">Logout</a>
     </div>
 
     <!-- Profile Summary -->
@@ -88,6 +93,25 @@
     </div>
 
   </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+    
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', function(event) {
+      const sidebar = document.getElementById('sidebar');
+      const toggle = document.querySelector('.mobile-menu-toggle');
+      
+      if (window.innerWidth <= 480) {
+        if (!sidebar.contains(event.target) && !toggle.contains(event.target)) {
+          sidebar.classList.remove('show');
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
